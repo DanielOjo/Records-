@@ -29,14 +29,14 @@ def EditEntry():
     contact_name_change = str(input("Please enter their new contact name: "))
     number_change = str(input("Please enter their new number: "))
     contactList.pop(place_to_change)
-    contactList.insert(place_to_change,contact_name_change)
-    number = contactList[indexSought].number
-    print(number)
-
+    contactList.insert(place_to_change,contact_name_change,number_change)
+    
 # function to delete an entry
 def DeleteEntry():
     indexSought = GetContactIndex()
-
+    place_to_change = str(input("Please select a contact to delete: "))
+    contactList.pop(place_to_change)
+    
 
 # function to find a number
 def FindNumber():
@@ -49,9 +49,12 @@ def GetContactIndex():
     nameToFind = str(input("Please enter contact name: "))
     index = 0
     int(index)
-    for index in (0,len(contactList)):
+    Found = False
+    while not Found:
         if contactList[index].name == nameToFind:
             return index
+        else:
+            index = index + 1
     return -1
 
 # function to populate initial contact list
