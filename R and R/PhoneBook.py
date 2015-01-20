@@ -49,9 +49,13 @@ def GetContactIndex():
     nameToFind = str(input("Please enter contact name: "))
     index = 0
     int(index)
-    for index in (0,len(contactList)):
+    Found = False
+    while not Found:
         if contactList[index].name == nameToFind:
             return index
+            Found = True
+        else:
+            index = index + 1
     return -1
 
 # function to populate initial contact list
