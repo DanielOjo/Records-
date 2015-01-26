@@ -26,10 +26,14 @@ def AddEntry():
 def EditEntry():
     indexSought = GetContactIndex()
     contact_name_change = (input("Please enter their new contact name: "))
+    contactList[indexSought].name = contact_name_change
     number_change = (input("Please enter their new number: "))
-    contactList.name[indexSought]= Contact(contact_name_change,number_change)
-    contact = contactList[indexSought].name,number
-    print(contact)
+    contactList[indexSought].number = number_change
+    name = contactList[indexSought].name
+    print(name)
+    number = contactList[indexSought].number
+    print(number)
+    
     
 # function to delete an entry
 def DeleteEntry():
