@@ -25,17 +25,16 @@ def AddEntry():
 # function to edit an entry
 def EditEntry():
     indexSought = GetContactIndex()
-    place_to_change = indexSought
-    contact_name_change = str(input("Please enter their new contact name: "))
-    number_change = str(input("Please enter their new number: "))
-    contactList.pop(place_to_change)
-    contactList.insert(place_to_change,contact_name_change,number_change)
+    contact_name_change = (input("Please enter their new contact name: "))
+    number_change = (input("Please enter their new number: "))
+    contactList[0] = contact_name_change
+    contactList[0,1] = number_change
+    
     
 # function to delete an entry
 def DeleteEntry():
     indexSought = GetContactIndex()
-    place_to_change = str(input("Please select a contact to delete: "))
-    contactList.pop(place_to_change)
+    contactList.pop(indexSought)
 
 
 # function to find a number
