@@ -51,7 +51,6 @@ def FindNumber():
 def GetContactIndex():
     nameToFind = str(input("Please enter contact name: "))
     index = 0
-    int(index)
     Found = False
     while not Found:
         if contactList[index].name == nameToFind:
