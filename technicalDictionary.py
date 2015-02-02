@@ -11,16 +11,14 @@ def InitialiseDictionary():
     techList.append(Entry('Variable','a location in memory that contains data'))
 
 def GetMeaning(term):
-    index = 0
-    wantedIndex = -1
-    while index < len(techList)-1:
+    index = 0 
+    wanted_index = -1
+    while index < len(techList): 
         if techList[index].term == term:
-            wantedIndex = index
-        else:
-            index = index + 1
-        return techList[index].meaning
-    if wantedIndex != -1:
-        return techList[index].meaning
+            wanted_index = index
+        index = index + 1 
+    if wanted_index != -1:
+        return techList[wanted_index].meaning
     else:
         return 'not listed'
     
